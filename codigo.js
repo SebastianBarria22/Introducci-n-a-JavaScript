@@ -2,7 +2,7 @@
 var btn = document.getElementById("btn");
 /* Obtenemos el div que muestra el resultado y lo
 almacenamos en una variable llamada "resultado" */
-var resultado = document.getElementById("random")
+var resultado = document.getElementById("resultado")
 /* Obtenemos los dos input y los almacenamos en
 variables "inputUno" y "inputDos" */
 var inputUno = document.getElementById("input-uno");
@@ -13,8 +13,12 @@ btn.addEventListener("click",function(){
 su atributo "value" */
 var n1 = inputUno.value;
 var n2 = inputDos.value;
-resultado.innerHTML = aleatorio(n1,n2);
+/* Llamamos a una función que permite realizar la
+suma de los números y los mostramos al usuario" */
+resultado.innerHTML = suma(n1,n2);
 });
-function aleatorio(n1,n2){
-    return Math.round(Math.random()*(n2-n1)+parseInt(n1))
+/* Función que retorna la suma de dos números */
+function suma(n1, n2){
+// Es necesario aplicar parseInt a cada número
+return parseInt(n1) + parseInt(n2);
 }
